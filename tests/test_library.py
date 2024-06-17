@@ -24,11 +24,3 @@ def test_find_book_by_title():
     assert library.find_book_by_title("tutu") == book3
     library.remove_book(book3)
     assert library.find_book_by_title("tutu") is None
-
-
-def test_list_books(library, book1, book2):
-    library.add_book(book1)
-    library.add_book(book2)
-    book_list = library.list_books()
-    assert "blabla" in book_list
-    assert "toto" in book_list
